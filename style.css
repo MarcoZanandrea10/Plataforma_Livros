@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Dancing+Script:wght@400..700&family=Funnel+Display:wght@559&display=swap');
+
+:root {
+    --cor-1: #E670A1;
+    --cor-2: #BB5C83;
+    --cor-3: #a07486;
+    --cor-4: #994B6B;
+    --cor-fundo: #EFDCC8;
+}
+
+body {
+    background-color: var(--cor-fundo);
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+    border-bottom: 2px solid var(--cor-1);
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+h1 {
+    color: var(--cor-1);
+    font-family: "Dancing Script", sans-serif ;
+    text-align: left;
+    margin: 20px 40px;
+    font-size: 3.5rem;
+}
+
+nav {
+    margin-left: auto; 
+}
+
+.navs {
+    display: inline-block;
+    list-style: none;
+    margin: 30px 10px;
+}
+
+.icon-nav {
+    fill: var(--cor-1);
+    margin-right: 18px;
+    width: 22px;   
+    height: 22px;
+}
+
+.icon-nav:hover {
+    fill: var(--cor-4);
+    transform: translateY(-5px) scale(1.02);
+    transition: all 0.3s ease;
+}
