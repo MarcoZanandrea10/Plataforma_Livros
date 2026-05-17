@@ -9,7 +9,7 @@
     <link rel="icon" href="img/icon.png">
 </head>
 
-<body data-page="index">
+<body data-page="ativos">
     <header>
         <h1>Página Marcada</h1>
 
@@ -49,10 +49,9 @@
     <main>
         <section class="pagina-publica" id="paginaPublica">
             <div class="public-card">
-                <h2>Organize suas leituras em um só lugar</h2>
+                <h2>Seus livros ativos ficam aqui</h2>
                 <p>
-                    Cadastre seus livros, acompanhe o progresso, salve desejos, favoritos
-                    e mantenha sua biblioteca pessoal sempre organizada.
+                    Entre na sua conta para ver apenas os livros que você está lendo no momento.
                 </p>
 
                 <button class="btn" data-open-login>Entrar ou criar conta</button>
@@ -61,103 +60,16 @@
 
         <section class="area-logada escondido" id="areaLogada">
             <section class="hero">
-                <h2>Minha lista de livros</h2>
+                <h2>Livros ativos</h2>
             </section>
 
-            <section class="container layout">
-                <aside class="card form-card">
-                    <h3>Adicionar livro</h3>
+            <section class="container card">
+                <div class="lista-header">
+                    <h3>Estou lendo</h3>
+                    <a href="index.html" class="btn">Adicionar novo livro</a>
+                </div>
 
-                    <form id="livroForm">
-                        <div class="form-section">
-                            <div class="form-group">
-                                <label for="titulo">Título</label>
-                                <input type="text" id="titulo" required>
-                            </div>
-
-                            <div class="form-group">
-                                <label for="autor">Autor</label>
-                                <input type="text" id="autor" required>
-                            </div>
-
-                            <div class="form-grid">
-                                <div class="form-group">
-                                    <label for="paginas">Total de páginas</label>
-                                    <input type="number" id="paginas" min="1" required>
-                                </div>
-
-                                <div class="form-group">
-                                    <label for="paginaAtual">Página atual</label>
-                                    <input type="number" id="paginaAtual" min="0" value="0">
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="form-section">
-                            <h4>Status da leitura</h4>
-
-                            <div class="form-group">
-                                <label for="status">Categoria/status</label>
-                                <select id="status">
-                                    <option value="para-ler">Para ler depois</option>
-                                    <option value="lendo">Lendo agora</option>
-                                    <option value="pausado">Pausado</option>
-                                    <option value="lido">Lido</option>
-                                    <option value="compra">Lista de compra</option>
-                                    <option value="desejo">Desejo</option>
-                                    <option value="melhor">Melhores/Favoritos</option>
-                                </select>
-                            </div>
-
-                            <div class="form-grid">
-                                <div class="form-group">
-                                    <label for="dataInicio">Data de início</label>
-                                    <input type="date" id="dataInicio">
-                                </div>
-
-                                <div class="form-group">
-                                    <label for="dataFim">Data de finalização</label>
-                                    <input type="date" id="dataFim">
-                                </div>
-                            </div>
-
-                            <div class="form-group">
-                                <label for="nota">Nota pessoal</label>
-                                <input type="number" id="nota" min="0" max="10" step="0.5" placeholder="0 a 10">
-                            </div>
-                        </div>
-
-                        <div class="form-section">
-                            <h4>Observações</h4>
-
-                            <div class="form-group">
-                                <textarea id="observacoes" placeholder="Opinião, resumo, frases marcantes..."></textarea>
-                            </div>
-                        </div>
-
-                        <button type="submit" class="btn btn-full">Salvar livro</button>
-                    </form>
-                </aside>
-
-                <section class="card">
-                    <div class="lista-header">
-                        <h3>Todos os livros</h3>
-                        <input type="text" id="buscaLivro" class="search" placeholder="Buscar livro...">
-                    </div>
-
-                    <div class="filtros">
-                        <button class="filtro ativo" data-filter="todos">Todos</button>
-                        <button class="filtro" data-filter="lendo">Lendo</button>
-                        <button class="filtro" data-filter="para-ler">Para ler</button>
-                        <button class="filtro" data-filter="lido">Lidos</button>
-                        <button class="filtro" data-filter="pausado">Pausados</button>
-                        <button class="filtro" data-filter="compra">Compra</button>
-                        <button class="filtro" data-filter="desejo">Desejos</button>
-                        <button class="filtro" data-filter="melhor">Melhores</button>
-                    </div>
-
-                    <div id="listaLivros" class="livros-grid"></div>
-                </section>
+                <div id="listaLivros" class="livros-grid"></div>
             </section>
         </section>
     </main>
